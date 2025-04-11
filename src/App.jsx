@@ -3,22 +3,78 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
- export const Card=()=> {(<div>
-    <Series/>
-    <Series></Series>
-     {Series}
-     </div>)
- };
+import { Fragment } from "react"
 
-const Series=()=>{
-  return (
-    <div>
+//  export const Card=()=> {(<div>
+//     <Series/>
+//     <Series></Series>
+//      {Series}
+//      </div>)
+//  };
+
+// const Series=()=>{
+//   return (
+//     <div>
       
-        <img src="/hen.jpg" alt="" width="400px" />
+//         <img src="/hen.jpg" alt="" width="400px" />
       
-      <h1>Name: Series name</h1>
-      <h2>Rating : 8.5</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur nisi ullam adipisci recusandae unde placeat veritatis sunt quidem, minus est eaque quas nostrum rerum eligendi aliquid assumenda iusto porro.</p>
-    </div>
+//       <h1>Name: Series name</h1>
+//       <h2>Rating : 8.5</h2>
+//       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur nisi ullam adipisci recusandae unde placeat veritatis sunt quidem, minus est eaque quas nostrum rerum eligendi aliquid assumenda iusto porro.</p>
+//     </div>
+//   )
+// }
+
+// ************Array with keys******************************
+// export const Card=()=>{
+//   return  [<Series key="1"/>, <Series key="2"/> , <Series key="3"/>]
+// }
+
+
+// using fragment***************************
+// import {Fragment} from "react";
+// int this case
+/* <Fragment></Fragment> */
+
+
+// or 
+// import React from "react";
+// in this case 
+// <React.Fragment></React.Fragment>
+
+// export const Card=()=>{
+//   return  (
+//     <React.Fragment>
+//       <Series/>
+//       <Series/>
+//       <Series/>
+//     </React.Fragment>
+//   )
+// }
+
+
+//empty tag*****************************
+//another method
+
+export const Card=()=>{
+  return  (
+    <>
+      <Series/>
+      <Series/>
+      <Series/>
+    </>
   )
 }
+
+const Series=()=>{
+    return (
+      <div>
+        
+          <img src="/hen.jpg" alt="" width="400px" />
+        
+        <h1>Name: Series name</h1>
+        <h2>Rating : 8.5</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur consectetur nisi ullam adipisci recusandae unde placeat veritatis sunt quidem, minus est eaque quas nostrum rerum eligendi aliquid assumenda iusto porro.</p>
+      </div>
+    )
+  }
