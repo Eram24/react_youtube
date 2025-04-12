@@ -1,6 +1,6 @@
-export const SeriesCard=(props)=>{
+export const SeriesCard=({data})=>{
     // console.log(props);
-    const { img_url,name,rating,description,genre,cast,watch_url } = props.data;
+    const { img_url,name,rating,description,genre,cast,watch_url } = data;
     console.log(name);
     return (
         <li >
