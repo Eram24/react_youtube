@@ -5,10 +5,12 @@ import './index.css'
 // import {Practice} from './Practice.jsx'
 // import Card,{Header,Footer} from "./components/Series";
 
-import {Series} from "./components/Series"
+// import {Series} from "./components/Series"
+
+import Profile from './components/Profile'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <Series></Series>
+   <Profile></Profile>
   </StrictMode>,
 )

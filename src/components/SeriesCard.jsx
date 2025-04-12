@@ -1,10 +1,10 @@
 export const SeriesCard=({data})=>{
     // console.log(props);
-    const { img_url,name,rating,description,genre,cast,watch_url } = data;
+    const { id,img_url,name,rating,description,genre,cast,watch_url } = data;
     console.log(name);
     return (
         <li >
-            <div>
+            <div key={id}>
                 <img src={img_url}  alt=""  width="40%" height="40%"/>
             </div>
             <h2>Name : {name}</h2>
