@@ -1,5 +1,7 @@
-import "./Series";
+
 import styles from "./Series.module.css";
+import styled from "styled-components";
+
 export const SeriesCard=({data})=>{
     // console.log(props);
     const { id,img_url,name,rating,description,genre,cast,watch_url } = data;
@@ -11,7 +13,6 @@ export const SeriesCard=({data})=>{
         color: '#000',
         marginTop: '1rem',
         border:'none',
-        // color: "black",
         fontWeight: "600",
      }
 
@@ -28,7 +29,9 @@ export const SeriesCard=({data})=>{
             <p>Genre : {genre}</p>
             <p>Cast : {cast}</p>
             <a href={watch_url} target="_blank">
-            <button style={watchBtn}>Watch Now</button>
+            { <button style={watchBtn}>Watch Now</button>
+            }
+            
             </a>
             </div>
             
