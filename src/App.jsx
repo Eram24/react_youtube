@@ -103,7 +103,9 @@
 
  
 import {Series} from "./components/Series"
-import "./components/Series.css";
+// import "./components/Series.css";
+import "./components/Series.module.css";
+
 export const App=()=>{
   return (
     <section className="container">

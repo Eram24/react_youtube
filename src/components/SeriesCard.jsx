@@ -1,29 +1,29 @@
 import "./Series";
-
+import styles from "./Series.module.css";
 export const SeriesCard=({data})=>{
     // console.log(props);
     const { id,img_url,name,rating,description,genre,cast,watch_url } = data;
-    const ratingClass=rating>=8.5 ? "super-hit" : "average";
+    const ratingClass=rating>=8.5 ? styles["super-hit"] : styles.average;
     
     const watchBtn={
-        backgroundColor: `${rating>=8.5 ? "rgb(89, 214, 177" : "rgb(211, 172, 115)"}`,
-        padding: "0.7rem 1rem",
-        color: '#fff',
+        backgroundColor: `${rating>=8.5 ? "rgb(89, 214, 177" : "rgb(240, 213, 93)"}`,
+        padding: "0.7rem 1.5rem",
+        color: '#000',
         marginTop: '1rem',
         border:'none',
-        color: "#000",
-        fontWeight: "600"
+        // color: "black",
+        fontWeight: "600",
      }
 
     console.log(name);
     return (
-        <li className="card">
-            <div key={id} className="img">
+        <li className={styles.card}>
+            <div key={id} className={styles.img}>
                 <img src={img_url}  alt=""  width="40%" height="40%"/>
             </div>
-            <div className="content">
+            <div className={styles.content}>
             <h2 > Name : {name}</h2>
-            <h3>Rating :<span className={`rating ${ratingClass}` }>{rating}</span></h3>
+            <h3>Rating :<span className={`${styles.rating} ${ratingClass}` }>{rating}</span></h3>
             <p>Summary : {description}</p>
             <p>Genre : {genre}</p>
             <p>Cast : {cast}</p>
