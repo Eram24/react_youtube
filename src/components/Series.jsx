@@ -11,13 +11,13 @@
 // }
 
 // export default Card;
-
+ 
 import seriesData from "../api/seriesData.json"
 import { SeriesCard } from "./SeriesCard";
 
 export const Series=()=>{
     return (
-    <ul>
+    <ul className="grid grid-three-cols">
        {
         seriesData.map((Val)=> <SeriesCard key={Val.id} data={Val}/>
     )} 
